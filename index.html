@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Interactive Diagram</title>
+        <script src="go.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="data.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <style type="text/css">
+            body { font-family: sans-serif; }
+            .checkbox-identifier { 
+               display: inline-block;
+               background: red; 
+               width: 1em;
+               height: 1em;
+               margin-right: 10px;
+               border: 1px solid black;
+            }
+            .services { background: lightyellow; }
+            .events { background: lightblue; }
+            .comms { background: lightgreen; }
+            .analytics { background: lavender; }
+            .screenshots { background: orange; }
+            .graphql { background: lightcoral; }
+        </style>
+<script src="main.js"></script>
+    <body>
+        <label>Services <span class="checkbox-identifier services"/> </label><input checked type="checkbox" onClick="javascript: toggleType('service', this)"/><br/>
+        <label>Events <span class="checkbox-identifier events"/> </label><input checked type="checkbox" onClick="javascript: toggleType('event', this)"/><br/>
+        <label>Comms <span class="checkbox-identifier comms"/> </label><input checked type="checkbox" onClick="javascript: toggleType('comms', this)"/><br/>
+        <label>Analytics <span class="checkbox-identifier analytics"/> </label><input checked type="checkbox" onClick="javascript: toggleType('analytics', this)"/><br/>
+        <label>Screenshots <span class="checkbox-identifier screenshots"/> </label><input checked type="checkbox" onClick="javascript: toggleType('screenshot', this)"/><br/>
+        <label>GraphQL <span class="checkbox-identifier graphql"/> </label><input checked type="checkbox" onClick="javascript: toggleType('graphql', this)"/><br/>
+        <div id="myDiagramDiv" style="border: solid 1px blue; width:1900px; height:850px"></div>
+    </body>
+</html>

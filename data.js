@@ -1,0 +1,38 @@
+const diagramData = {
+    nodes: [
+        { key: "25.1", text: "25.1\nLoad William", isGroup: true },
+        { key: "25.2", text: "25.2\nLoad customer and select \"Auto-renew\"", isGroup: true },
+        { key: "25.3", text: "25.3\nDisplay current settings", isGroup: true },
+        { key: "25.10", text: "25.10\nLoad My Account", isGroup: true },
+        { key: "25.11", text: "25.11\nSelect Home Insurance Policy", isGroup: true },
+        { key: "25.12", text: "25.12\nPolicy Page", isGroup: true },
+        { key: "25.4", text: "25.4\nUpdate settings and confirm", isGroup: true },
+
+        { group: "25.4", category: "comms", text: "home/auto_renewal_changed" },
+        { group: "25.3", category: "service", text: "policies-lookup" },
+        { group: "25.3", category: "service", text: "boiler-renewals" },
+        { group: "25.4", category: "service", text: "comms-scheduler" },
+        { group: "25.4", category: "service", text: "policy-preferences" },
+        { group: "25.2", category: "service", text: "crm-service-actions" },
+        { group: "25.10", category: "service", text: "accounts-lookup-service" },
+        { group: "25.4", category: "event", text: "PolicyAutoRenewalChanged" },
+        { group: "25.12", category: "analytics", text: "home_insurance_policy_details_viewed" },
+        { group: "25.11", category: "analytics", text: "insurance_product_summary_viewed" },
+        { group: "25.4", category: "graphql", text: "insuranceUpdatePolicyAutoRenewal" },
+        { group: "25.3", category: "graphql", text: "insurancePolicy" },
+        { group: "25.10", category: "graphql", text: "insuranceAccount" },
+        { group: "25.11", category: "graphql", text: "insurancePolicy" },
+        { group: "25.10", category: "graphql", text: "GetPoliciesByAccount" },
+        { group: "25.10", category: "screenshot", imageSource: "shots/25.10.png" },
+        { group: "25.4", category: "screenshot", imageSource: "shots/25.4.png" },
+        { group: "25.12", category: "screenshot", imageSource: "shots/25.12.png" },
+    ],
+    links: [
+        { from: "25.1", to: "25.2" },
+        { from: "25.2", to: "25.3" },
+        { from: "25.3", to: "25.4" },
+        { from: "25.10", to: "25.11" },
+        { from: "25.11", to: "25.12" },
+        { from: "25.12", to: "25.4" },
+    ]
+};
